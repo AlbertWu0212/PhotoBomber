@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "14828393A82C41C8807E3C7B"
+               BlueprintIdentifier = "1373A638BDD94553B8572D6B"
                BuildableName = "libPods-SAMCache.a"
                BlueprintName = "Pods-SAMCache"
                ReferencedContainer = "container:Pods.xcodeproj">

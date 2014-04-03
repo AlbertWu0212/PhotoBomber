@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		245A2341BB5E4D048FD821B8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5092FDA356B3432FAFAF4EC1 /* libPods.a */; };
+		3167FA2918EC429600DDF0E7 /* WZBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3167FA2818EC429600DDF0E7 /* WZBDetailViewController.m */; };
+		3167FA2C18EC511800DDF0E7 /* WZBPresentDetailTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3167FA2B18EC511800DDF0E7 /* WZBPresentDetailTransition.m */; };
+		3167FA2F18EC556A00DDF0E7 /* WZBDismissDetailTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3167FA2E18EC556A00DDF0E7 /* WZBDismissDetailTransition.m */; };
+		3167FA3218EC5F0A00DDF0E7 /* WZBMetaDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3167FA3118EC5F0A00DDF0E7 /* WZBMetaDataView.m */; };
 		31F5AD4D18E7F07400EC412C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31F5AD4C18E7F07400EC412C /* Foundation.framework */; };
 		31F5AD4F18E7F07400EC412C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31F5AD4E18E7F07400EC412C /* CoreGraphics.framework */; };
 		31F5AD5118E7F07400EC412C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31F5AD5018E7F07400EC412C /* UIKit.framework */; };
@@ -36,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3167FA2718EC429600DDF0E7 /* WZBDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZBDetailViewController.h; sourceTree = "<group>"; };
+		3167FA2818EC429600DDF0E7 /* WZBDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZBDetailViewController.m; sourceTree = "<group>"; };
+		3167FA2A18EC511800DDF0E7 /* WZBPresentDetailTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZBPresentDetailTransition.h; sourceTree = "<group>"; };
+		3167FA2B18EC511800DDF0E7 /* WZBPresentDetailTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZBPresentDetailTransition.m; sourceTree = "<group>"; };
+		3167FA2D18EC556A00DDF0E7 /* WZBDismissDetailTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZBDismissDetailTransition.h; sourceTree = "<group>"; };
+		3167FA2E18EC556A00DDF0E7 /* WZBDismissDetailTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZBDismissDetailTransition.m; sourceTree = "<group>"; };
+		3167FA3018EC5F0A00DDF0E7 /* WZBMetaDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZBMetaDataView.h; sourceTree = "<group>"; };
+		3167FA3118EC5F0A00DDF0E7 /* WZBMetaDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZBMetaDataView.m; sourceTree = "<group>"; };
 		31F5AD4918E7F07400EC412C /* PhotoBombers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoBombers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31F5AD4C18E7F07400EC412C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		31F5AD4E18E7F07400EC412C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -130,8 +142,16 @@
 				31F5AD7C18E7F0B200EC412C /* WZBPhotosViewController.m */,
 				31F5AD7E18E7F7C500EC412C /* WZBPhotoCell.h */,
 				31F5AD7F18E7F7C500EC412C /* WZBPhotoCell.m */,
+				3167FA2D18EC556A00DDF0E7 /* WZBDismissDetailTransition.h */,
+				3167FA2E18EC556A00DDF0E7 /* WZBDismissDetailTransition.m */,
 				31F5AD8218E853C400EC412C /* WZBPhotoController.h */,
 				31F5AD8318E853C400EC412C /* WZBPhotoController.m */,
+				3167FA2718EC429600DDF0E7 /* WZBDetailViewController.h */,
+				3167FA2818EC429600DDF0E7 /* WZBDetailViewController.m */,
+				3167FA2A18EC511800DDF0E7 /* WZBPresentDetailTransition.h */,
+				3167FA2B18EC511800DDF0E7 /* WZBPresentDetailTransition.m */,
+				3167FA3018EC5F0A00DDF0E7 /* WZBMetaDataView.h */,
+				3167FA3118EC5F0A00DDF0E7 /* WZBMetaDataView.m */,
 				31F5AD5E18E7F07400EC412C /* Images.xcassets */,
 				31F5AD5318E7F07400EC412C /* Supporting Files */,
 			);
@@ -299,9 +319,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				31F5AD8418E853C400EC412C /* WZBPhotoController.m in Sources */,
+				3167FA2918EC429600DDF0E7 /* WZBDetailViewController.m in Sources */,
+				3167FA2C18EC511800DDF0E7 /* WZBPresentDetailTransition.m in Sources */,
 				31F5AD5D18E7F07400EC412C /* WZBAppDelegate.m in Sources */,
+				3167FA2F18EC556A00DDF0E7 /* WZBDismissDetailTransition.m in Sources */,
 				31F5AD7D18E7F0B200EC412C /* WZBPhotosViewController.m in Sources */,
 				31F5AD8018E7F7C500EC412C /* WZBPhotoCell.m in Sources */,
+				3167FA3218EC5F0A00DDF0E7 /* WZBMetaDataView.m in Sources */,
 				31F5AD5918E7F07400EC412C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

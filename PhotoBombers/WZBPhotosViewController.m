@@ -9,8 +9,11 @@
 #import "WZBPhotosViewController.h"
 #import "WZBPhotoCell.h"
 #import <SimpleAuth/SimpleAuth.h>
+#import "WZBDetailViewController.h"
+#import "WZBPresentDetailTransition.h"
+#import "WZBDismissDetailTransition.h"
 
-@interface WZBPhotosViewController ()
+@interface WZBPhotosViewController () <UIViewControllerTransitioningDelegate>
 
 @property (nonatomic) NSString *accessToken;
 @property (nonatomic) NSArray *photos;
@@ -94,4 +97,30 @@
     return cell;
 }
 
+#pragma mark
+#pragma mark CollectionView delegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary *photo = self.photos[indexPath.row];
+    
+    WZBDetailViewController *viewController = [[WZBDetailViewController alloc] init];
+    viewController.modalPresentationStyle = UIModalPresentationCustom;
+    viewController.transitioningDelegate = self;
+    viewController.photo = photo;
+    [self presentViewController:viewController animated:YES completion:nil];
+}
+
+#pragma mark
+#pragma mark transition delegate
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
+{
+    return [[WZBPresentDetailTransition alloc] init];
+}
+
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    return [[WZBDismissDetailTransition alloc] init];
+}
 @end
