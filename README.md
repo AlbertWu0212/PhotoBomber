@@ -1,4 +1,6 @@
 PhotoBomber
 ===========
-Using OAuth2.0 to connect Instagram and restore some kinds of photos in device.
-Using UICollectionView and some new fetures.
+Thanks to the great job of Instagram.
+The project shows you how to connect to the api of Instagram
+I use UICollectionView to pull the photo.
+
