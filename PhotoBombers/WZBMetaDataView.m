@@ -32,11 +32,9 @@
     
     // TODO: Set the avatar, username, time, number of likes, and number of comments
     [self.usernameButton setTitle:_photo[@"user"][@"username"] forState:UIControlStateNormal];
-    
-    [self.commentsButton setTitle:[NSString stringWithFormat:@"%d",[_photo[@"comments"][@"count"] intValue]] forState:UIControlStateNormal];
-    [self.likesButton setTitle:[NSString stringWithFormat:@"%d",[_photo[@"likes"][@"count"] intValue]] forState:UIControlStateNormal];
  
-    
+    [self.commentsButton setTitle:[_photo[@"comments"][@"count"] stringValue] forState:UIControlStateNormal];
+    [self.likesButton setTitle:[_photo[@"likes"][@"count"] stringValue] forState:UIControlStateNormal];
     //头像
     NSURLSession *session = [NSURLSession sharedSession];
     NSURL *url = [[NSURL alloc] initWithString:_photo[@"user"][@"profile_picture"]];
